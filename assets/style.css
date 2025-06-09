@@ -62,7 +62,7 @@ header nav ul li a:hover {
 /* Estilos da Seção Principal (Hero Section) */
 
 .hero-section  {
-    background-image: url(/assets/imgs/recepcao.png);
+    background-image: url(imgs/recepcao.png);
     background-size: cover;
     background-position: center;
     color: white;
@@ -334,4 +334,51 @@ footer .container {
     margin-top: 15px;
     font-size: 0.85em;
     opacity: 0.8;
+}
+
+/* Responsividade */
+
+/* Responsividade para a grade de especialidades */
+@media (max-width: 992px) {
+    .specialties-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta para telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .specialties-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+    .specialty-card {
+        max-width: 350px; /* Limita a largura dos cards em mobile para não ficarem muito largos */
+        margin: 0 auto; /* Centraliza os cards em mobile */
+    }
+}
+
+/* Responsividade para a seção de contato */
+@media (max-width: 768px) {
+    .contact-section p {
+        font-size: 1em; /* Fonte um pouco menor em mobile */
+    }
+
+    .map-container iframe {
+        height: 300px; /* Altura menor para o mapa em mobile */
+    }
+}
+
+/* Responsividade para o rodapé */
+@media (min-width: 768px) {
+    footer .container {
+        flex-direction: row; /* Em telas maiores, coloca logo à esquerda e info à direita */
+        justify-content: space-between; /* Espaço entre logo e info */
+        text-align: left; /* Alinha o texto das informações à esquerda */
+    }
+
+    .footer-logo {
+        margin-bottom: 0; /* Remove margem inferior da logo quando alinhada */
+    }
+
+    .footer-info {
+        text-align: right; /* Alinha o texto das informações à direita */
+    }
 }
