@@ -1,0 +1,337 @@
+/* Reset básico e configurações globais */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+/* Estilos do Cabeçalho */
+
+header {
+    background-color: #00abc4;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li  {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0f0f1; 
+}
+
+/* Estilos da Seção Principal (Hero Section) */
+
+.hero-section  {
+    background-image: url(../imgs/recepcao.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    padding: 250px 0;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative; 
+    z-index: 2; 
+}
+
+.hero-section h1 {
+    font-size: 3em; 
+    margin-bottom: 10px; 
+    font-weight: 700; 
+}
+
+.hero-section h2 {
+    font-size: 2em; 
+    font-weight: 400; 
+}
+
+/* Estilos da Seção Sobre a Clínica */
+
+.about-section {
+    padding: 60px 0; 
+    background-color: #f9f9f9;
+    text-align: center; 
+}
+
+.about-section h3 {
+    font-size: 2.2em;
+    color: black;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00abc4;
+    margin: 10px auto 0 auto;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text-points {
+    flex: 1; 
+    text-align: left; 
+}
+.about-text-points  h4 {
+    font-size: 1.4em;
+    color: #00abc4;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.specialties-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: white;
+}
+
+.specialties-section h3 {
+    font-size: 2.2em;
+    color: black;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+.specialties-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00abc4;
+    margin: 10px auto 0 auto;
+}
+
+.specialties-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.specialty-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px); 
+}
+
+.specialty-card img {
+    width: 100%; 
+    max-height: 180px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-bottom: 20px;
+}
+
+.specialty-card h4 {
+    font-size: 1.3em;
+    color: #00ABC4; 
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+}
+
+.specialty-card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0; 
+}
+
+/* Estilos da Seção do Botão Ver Horários */
+
+.schedule-button-section {
+    background-color: #e6f6f8;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.btn-schedule {
+    display: inline-block;
+    background-color: #00ABC4;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-schedule:hover {
+    background-color: #008C9E;
+}
+
+/* Estilos da Seção de Contato */
+
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact-section h3 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-section h3::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00abc4;
+    margin: 10px auto 30px auto;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    margin-top: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 100%;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+/* Estilos do Rodapé */
+
+footer {
+    background-color: #00ABC4;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.footer-info {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+.footer-info p:last-child {
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
