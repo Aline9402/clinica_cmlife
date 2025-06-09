@@ -62,7 +62,7 @@ header nav ul li a:hover {
 /* Estilos da Seção Principal (Hero Section) */
 
 .hero-section  {
-    background-image: url(../imgs/recepcao.png);
+    background-image: url(/assets/imgs/recepcao.png);
     background-size: cover;
     background-position: center;
     color: white;
